@@ -32,11 +32,31 @@ function splitLetters(className) {
     window.addEventListener("scroll", function () {
         for (let i = 0; i < txt.length; i++) {
             letters[i].style.transform = `translate(0, -${window.scrollY * letters[i].speed}px)`;
-            letters[i].style.opacity = `${1 - (window.scrollY / 400)}`;
+            letters[i].style.opacity = `${1 - (window.scrollY / 700)}`;
             letters[i].style.filter = `blur(${window.scrollY / 60}px)`;
         }
     });
 }
+
+
+addEventListener("mousemove", (event) => {
+    // Move `#cursor` element to the mouse position
+    const cursor = document.querySelector(".cursor");
+    cursor.style.left = event.pageX + "px";
+    cursor.style.top = event.pageY + "px";
+});
+
+let hoverables = document.querySelectorAll(".hoverable");
+const cursor = document.querySelector(".cursor");
+hoverables.forEach((el) => {
+    el.addEventListener("mouseover", function () {
+        cursor.classList.add("cursorBig");
+    });
+    el.addEventListener("mouseleave", function () {
+        cursor.classList.remove("cursorBig");
+    });
+});
+
 
 window.addEventListener("load", function () {
     // Call functions to modify both containers
