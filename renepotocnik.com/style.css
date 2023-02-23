@@ -36,8 +36,8 @@ body {
     position: absolute;
     margin-top: -1.5vh;
     margin-left: -1.5vh;
-    width: 3vh;
-    height: 3vh;
+    width: 4vh;
+    height: 4vh;
     z-index: 10;
     border-radius: 100%;
     background-color: rgb(255,255,255);
@@ -102,4 +102,10 @@ a:hover {
 .logoImage {
     width: 10vw;
     height: 10vw;
+}
+
+#c {
+    display: block;
+    position: absolute;
+    mix-blend-mode: difference;
 }
