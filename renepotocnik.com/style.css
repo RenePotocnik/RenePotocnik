@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    color: white;
+    background-color: black;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+.mainNameSection {
+    display: grid;
+    place-items: start;
+}
+.nameLetterContainer1, .nameLetterContainer2 {
+    margin-left: 3vw;
+    font-size: 15vw;
+    display: block;
+}
+.nameLetter {
+    transition: all 1s;
+    min-width: 3vw;
+    display: inline-block;
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(10vh);
+    transition: all 2s;
+}
+.showing {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
