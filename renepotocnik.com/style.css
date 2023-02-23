@@ -26,6 +26,10 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #444444;
 }
+::selection {
+    background: white;
+    color: black;
+}
 
 .cursor {
     display: block;
