@@ -33,7 +33,7 @@ function splitLetters(className) {
         for (let i = 0; i < txt.length; i++) {
             letters[i].style.transform = `translate(0, -${window.scrollY * letters[i].speed}px)`;
             letters[i].style.opacity = `${1 - (window.scrollY / 400)}`;
-            letters[i].style.filter = `blur(${window.scrollY / 20}px)`;
+            letters[i].style.filter = `blur(${window.scrollY / 60}px)`;
         }
     });
 }
