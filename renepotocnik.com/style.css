@@ -67,7 +67,7 @@ section {
     place-items: center;
     align-content: center;
     height: 100vh;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
 }
 .mainNameSection {
     display: grid;
