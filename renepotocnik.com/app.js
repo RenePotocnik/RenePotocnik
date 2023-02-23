@@ -32,8 +32,8 @@ function splitLetters(className) {
     window.addEventListener("scroll", function () {
         for (let i = 0; i < txt.length; i++) {
             letters[i].style.transform = `translate(0, -${window.scrollY * letters[i].speed}px)`;
-            letters[i].style.opacity = `${1 - (window.scrollY / 700)}`;
-            letters[i].style.filter = `blur(${window.scrollY / 60}px)`;
+            letters[i].style.opacity = `${1 - (window.scrollY / 900)}`;
+            letters[i].style.filter = `blur(${window.scrollY / 80}px)`;
         }
     });
 }
