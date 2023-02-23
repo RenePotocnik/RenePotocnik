@@ -3,9 +3,11 @@
 * {
     cursor: none;
 }
+
 body, html {
     scroll-snap-type: y mandatory;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -13,19 +15,24 @@ body {
     color: white;
     background-color: black;
 }
+
 ::-webkit-scrollbar {
     width: 10px;
 }
+
 ::-webkit-scrollbar-track {
     background: #111111;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #222222;
     border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #444444;
 }
+
 ::selection {
     background: white;
     color: black;
@@ -40,11 +47,12 @@ body {
     height: 4vh;
     z-index: 10;
     border-radius: 100%;
-    background-color: rgb(255,255,255);
+    background-color: rgb(255, 255, 255);
     mix-blend-mode: difference;
     pointer-events: none;
     transition: 0.1s;
 }
+
 .cursorBig {
     width: 15vh;
     height: 15vh;
@@ -57,6 +65,7 @@ body {
     transform: translateY(10vh);
     transition: 2s;
 }
+
 .showing {
     opacity: 1;
     transform: translate(0, 0);
@@ -69,20 +78,24 @@ section {
     height: 100vh;
     scroll-snap-align: start;
 }
+
 .mainNameSection {
     display: grid;
     place-items: start;
     min-height: 100vh;
 }
+
 .nameLetterContainer1, .nameLetterContainer2 {
     margin-left: 10vw;
     font-size: 15vw;
     display: block;
     height: 17vw;
 }
+
 .nameLetterContainer2 {
     margin-top: -5vw;
 }
+
 .nameLetter {
     transition: 1s;
     min-width: 3vw;
@@ -96,9 +109,11 @@ a {
     font-weight: 500;
     transition: 0.3s !important;
 }
+
 a:hover {
     font-size: 11vw;
 }
+
 .logoImage {
     width: 10vw;
     height: 10vw;
