@@ -35,24 +35,24 @@ section {
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 100vh;
     scroll-snap-align: center;
 }
-
 .mainNameSection {
     display: grid;
     place-items: start;
+    min-height: 100vh;
+}
+.linksContainer {
+    margin-bottom: 25vh;
 }
 .nameLetterContainer1, .nameLetterContainer2 {
     margin-left: 10vw;
     font-size: 15vw;
     display: block;
-}
-.nameLetterContainer1 {
-    margin-bottom: -8vh;
+    height: 17vw;
 }
 .nameLetterContainer2 {
-    margin-top: -8vh;
+    margin-top: -5vw;
 }
 .nameLetter {
     transition: all 0.5s;
