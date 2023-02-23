@@ -7,8 +7,6 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
 
 
 function splitLetters(className) {
@@ -34,7 +32,8 @@ function splitLetters(className) {
     window.addEventListener("scroll", function () {
         for (let i = 0; i < txt.length; i++) {
             letters[i].style.transform = `translate(0, -${window.scrollY * letters[i].speed}px)`;
-            letters[i].style.opacity = `${1 - (window.scrollY / 500)}`;
+            letters[i].style.opacity = `${1 - (window.scrollY / 400)}`;
+            letters[i].style.filter = `blur(${window.scrollY / 20}px)`;
         }
     });
 }
@@ -43,4 +42,7 @@ window.addEventListener("load", function () {
     // Call functions to modify both containers
     splitLetters("nameLetterContainer1");
     splitLetters("nameLetterContainer2");
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
 });
