@@ -5,6 +5,7 @@ body {
     font-family: Poppins, sans-serif;
     color: white;
     background-color: black;
+    scroll-snap-type: both mandatory;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -20,26 +21,6 @@ body {
     background: #444444;
 }
 
-section {
-    display: grid;
-    place-items: center;
-    align-content: center;
-    min-height: 100vh;
-}
-.mainNameSection {
-    display: grid;
-    place-items: start;
-}
-.nameLetterContainer1, .nameLetterContainer2 {
-    margin-left: 3vw;
-    font-size: 15vw;
-    display: block;
-}
-.nameLetter {
-    transition: all 1s;
-    min-width: 3vw;
-    display: inline-block;
-}
 .hidden {
     opacity: 0;
     transform: translateY(10vh);
@@ -50,3 +31,42 @@ section {
     transform: translate(0, 0);
 }
 
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    scroll-snap-align: center;
+}
+
+.mainNameSection {
+    display: grid;
+    place-items: start;
+}
+.nameLetterContainer1, .nameLetterContainer2 {
+    margin-left: 10vw;
+    font-size: 15vw;
+    display: block;
+}
+.nameLetterContainer1 {
+    margin-bottom: -8vh;
+}
+.nameLetterContainer2 {
+    margin-top: -8vh;
+}
+.nameLetter {
+    transition: all 0.5s;
+    min-width: 3vw;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 10vw;
+    font-weight: 500;
+}
+.logoImage {
+    width: 10vw;
+    height: 10vw;
+}
