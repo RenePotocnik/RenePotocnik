@@ -14,6 +14,7 @@ body {
     font-family: Poppins, sans-serif;
     color: white;
     background-color: black;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -123,4 +124,6 @@ a:hover {
     display: block;
     position: absolute;
     mix-blend-mode: difference;
+    margin-top: 0;
+    user-select: none;
 }

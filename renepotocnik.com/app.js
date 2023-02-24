@@ -39,15 +39,19 @@ function splitLetters(className) {
 }
 
 
+const cursor = document.querySelector(".cursor");
+
 addEventListener("mousemove", (event) => {
     // Move `#cursor` element to the mouse position
-    const cursor = document.querySelector(".cursor");
-    cursor.style.left = event.pageX + "px";
-    cursor.style.top = event.pageY + "px";
+    if (!('ontouchstart' in window) || !(navigator.maxTouchPoints > 0)) {
+        cursor.style.left = event.pageX + "px";
+        cursor.style.top = event.pageY + "px";
+    } else {
+        cursor.style.display = "none";
+    }
 });
 
 let hoverables = document.querySelectorAll(".hoverable");
-const cursor = document.querySelector(".cursor");
 hoverables.forEach((el) => {
     el.addEventListener("mouseover", function () {
         cursor.classList.add("cursorBig");
@@ -67,92 +71,3 @@ window.addEventListener("load", function () {
     hiddenElements.forEach((el) => observer.observe(el));
 });
 
-
-let partNum = 50;
-let c = document.getElementById('c');
-let ctx = c.getContext('2d');
-
-let w = window.innerWidth;
-let h = window.innerHeight;
-
-let mouse = {
-    x: w / 2,
-    y: 0
-};
-
-window.addEventListener('mousemove', function (e) {
-    mouse.x = e.clientX || e.pageX;
-    mouse.y = e.clientY || e.pageY
-}, false);
-
-let particles = [];
-for (i = 0; i < partNum; i++) {
-    particles.push(new Particle);
-}
-
-function Particle() {
-    this.x = Math.random() * w - w / 20;
-    this.y = Math.random() * h;
-
-    this.r = Math.random() * 7.5 + 3.25;
-}
-
-let draw = function () {
-    c.width = w;
-    c.height = h;
-
-    for (let t = 0; t < particles.length; t++) {
-        let p = particles[t];
-        let nowX = p.r + mouse.x / 4.6;
-        let nowY = p.r + mouse.y / 4.6;
-        let color = "rgba(255, 255, 255, 0.9";
-
-        if (p.r < 10) {
-            nowX = p.x + mouse.x / 0.5;
-            nowY = p.y + mouse.y / 0.5;
-        }
-        if (p.r < 9) {
-            nowX = p.x + mouse.x / 2;
-            nowY = p.y + mouse.y / 2;
-        }
-        if (p.r < 8) {
-            nowX = p.x + mouse.x / 3.5;
-            nowY = p.y + mouse.y / 3.5;
-        }
-        if (p.r < 7) {
-            nowX = p.x + mouse.x / 5;
-            nowY = p.y + mouse.y / 5;
-        }
-        if (p.r < 6) {
-            nowX = p.x + mouse.x / 6.5;
-            nowY = p.y + mouse.y / 6.5;
-        }
-        if (p.r < 5) {
-            nowX = p.x + mouse.x / 8;
-            nowY = p.y + mouse.y / 8;
-        }
-        if (p.r < 4) {
-            nowX = p.x + mouse.x / 9.5;
-            nowY = p.y + mouse.y / 9.5;
-        }
-        if (p.r < 3) {
-            nowX = p.x + mouse.x / 11;
-            nowY = p.y + mouse.y / 11;
-        }
-        if (p.r < 2) {
-            nowX = p.x + mouse.x / 12.5;
-            nowY = p.y + mouse.y / 12.5;
-        }
-        if (p.r < 1) {
-            nowX = p.x + mouse.x / 15;
-            nowY = p.y + mouse.y / 15;
-        }
-
-        ctx.beginPath();
-        ctx.fillStyle = color;
-        ctx.arc(nowX, nowY, p.r, Math.PI * 2, false);
-        ctx.fill();
-    }
-}
-
-setInterval(draw, 33);
