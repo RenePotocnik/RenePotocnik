@@ -1,4 +1,4 @@
-let partNum = 40;
+let partNum = 30;
 let c = document.getElementById('c');
 let ctx = c.getContext('2d');
 
@@ -11,8 +11,10 @@ let mouse = {
 };
 
 window.addEventListener('mousemove', function (e) {
-    mouse.x = e.clientX || e.pageX;
-    mouse.y = e.clientY || e.pageY
+    if (!('ontouchstart' in window) || !(navigator.maxTouchPoints > 0)) {
+        mouse.x = e.clientX || e.pageX;
+        mouse.y = e.clientY || e.pageY;
+    }
 }, false);
 
 let particles = [];
@@ -24,14 +26,14 @@ function Particle() {
     this.x = Math.random() * w - w / 20;
     this.y = Math.random() * h - h / 40;
 
-    this.r = Math.random() * 7.5 + 3.5;
+    this.r = Math.random() * 7 + 2;
 }
 
 let draw = function () {
     c.width = w;
     c.height = h;
 
-    const ratios = [0.5, 2, 3.5, 5, 6.5, 8, 9.5, 11, 12.5, 15, 16.5];
+    const ratios = [0.5, 2, 3.5, 5, 6.5, 8, 9.5, 11, 12.5];
 
     for (let t = 0; t < particles.length; t++) {
         let p = particles[t];
@@ -40,7 +42,7 @@ let draw = function () {
         let color = "rgb(255, 255, 255";
 
         let ratioIndex = 0;
-        while (ratioIndex < ratios.length && p.r < 11 - ratioIndex) {
+        while (ratioIndex < ratios.length && p.r < 9 - ratioIndex) {
             ratioIndex++;
         }
         nowX = p.x + mouse.x / ratios[ratioIndex];
@@ -53,4 +55,4 @@ let draw = function () {
     }
 }
 
-setInterval(draw, 33);
+setInterval(draw, 30);
