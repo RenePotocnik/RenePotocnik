@@ -13,8 +13,8 @@ let mouse = {
 
 window.addEventListener("deviceorientation", function (e) {
     // Move points based on device gyro
-    mouse.x = e.gamma;
-    mouse.y = e.beta;
+    mouse.x = e.gamma * 2;
+    mouse.y = e.beta * 2;
 }, true);
 
 window.addEventListener('mousemove', function (e) {
