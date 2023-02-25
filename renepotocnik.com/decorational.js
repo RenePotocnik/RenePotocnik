@@ -73,7 +73,8 @@ window.addEventListener('resize', function () {
     if (!throttled) {
         throttled = true;
         clearInterval(intervalDraw);
-        init();
+        // init();
+        window.location.reload();
         setTimeout(function () {throttled = false;}, delay);
     }
 });
