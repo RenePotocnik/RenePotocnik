@@ -92,6 +92,7 @@ section {
     font-size: 15vw;
     display: block;
     height: 17vw;
+    transform: translateY(-6vh);
 }
 
 .nameLetterContainer2 {
