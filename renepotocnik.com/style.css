@@ -64,7 +64,7 @@ body {
 .hidden {
     opacity: 0;
     transform: translateY(10vh);
-    transition: 2s;
+    transition: 3s;
 }
 
 .showing {
@@ -105,10 +105,13 @@ section {
 
 a {
     text-decoration: none;
+    padding: 5vh;
     color: white;
     font-size: 10vw;
     font-weight: 500;
     transition: 0.3s !important;
+    align-items: center;
+    display: inline-flex;
 }
 
 a:hover {
@@ -118,6 +121,7 @@ a:hover {
 .logoImage {
     width: 10vw;
     height: 10vw;
+    padding: 4vw;
 }
 
 #c {
