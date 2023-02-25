@@ -10,7 +10,15 @@ let mouse = {
     y: 0
 };
 
+
+window.addEventListener("deviceorientation", function (e) {
+    // Move points based on device gyro
+    mouse.x = e.gamma;
+    mouse.y = e.beta;
+}, true);
+
 window.addEventListener('mousemove', function (e) {
+    // Move points only if there's no touch
     if (!('ontouchstart' in window) || !(navigator.maxTouchPoints > 0)) {
         mouse.x = e.clientX || e.pageX;
         mouse.y = e.clientY || e.pageY;
