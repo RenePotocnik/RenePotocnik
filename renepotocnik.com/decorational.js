@@ -31,10 +31,10 @@ for (let i = 0; i < partNum; i++) {
 }
 
 function Particle() {
-    this.x = Math.random() * w - w / 20;
-    this.y = Math.random() * h - h / 40;
+    this.x = Math.random() * (w + w / 8) - w / 8;
+    this.y = Math.random() * (h + h / 8) - h / 8;
 
-    this.r = Math.random() * 7 + 2;
+    this.r = Math.random() * (screen.width * 0.004) + 2;
 }
 
 let draw = function () {
@@ -47,7 +47,7 @@ let draw = function () {
         let p = particles[t];
         let nowX = p.r + mouse.x / 4.6;
         let nowY = p.r + mouse.y / 4.6;
-        let color = "rgb(255, 255, 255";
+        let color = "rgb(255, 255, 255)";
 
         let ratioIndex = 0;
         while (ratioIndex < ratios.length && p.r < 9 - ratioIndex) {
