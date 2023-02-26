@@ -42,7 +42,7 @@ function init() {
         c.width = w;
         c.height = h;
 
-        const ratios = [0.5, 2, 3.5, 5, 6.5, 8, 9.5, 11, 12.5];
+        const ratios = [2, 3.5, 5, 6.5, 8, 9.5, 11, 12.5];
 
         for (let t = 0; t < particles.length; t++) {
             let p = particles[t];
