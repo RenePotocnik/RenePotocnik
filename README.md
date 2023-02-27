@@ -6,6 +6,14 @@
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=renepotocnik&theme=github_dark)](https://github.com/anuraghazra/github-readme-stats)
 
-[//]: # ([![Ashutosh's github activity graph]&#40;https://activity-graph.herokuapp.com/graph?username=renepotocnik&theme=react-dark&#41;]&#40;https://github.com/ashutosh00710/github-readme-activity-graph&#41;)
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=renepotocnik&theme=react-dark)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 </div>
+
+## Current Projects
+
+### [**renepotocnik.com**](https://www.renepotocnik.com/)
+Just a little personal website. It'll stay *WIP* for a long time...
+
+### Robotics
+Preparing for the [***competitions***](https://rescue.rcj.cloud/events/).
