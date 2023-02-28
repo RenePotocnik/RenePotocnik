@@ -6,6 +6,8 @@
 
 body, html {
     scroll-snap-type: y mandatory;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -39,11 +41,25 @@ body {
     color: black;
 }
 
-.cursor {
+.cursorPoint {
     display: block;
     position: absolute;
-    margin-top: -1.5vh;
-    margin-left: -1.5vh;
+    align-content: center;
+    transform: translate(-50%, -50%);
+    width: 1vh;
+    height: 1vh;
+    z-index: 11;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transition: 0s;
+}
+.cursor {
+    align-content: center;
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
     width: 4vh;
     height: 4vh;
     z-index: 10;
@@ -51,15 +67,13 @@ body {
     background-color: rgb(255, 255, 255);
     mix-blend-mode: difference;
     pointer-events: none;
-    transition: 0.05s;
+    transition: 0.1s;
 }
-
 .cursorBig {
     width: 15vh;
     height: 15vh;
-    margin-top: -7vh;
-    margin-left: -7vh;
-    transition: 0.05s;
+    transform: translate(-50%, -50%);
+    transition: 0.1s;
 }
 
 .hidden {
@@ -107,7 +121,6 @@ section {
 
 a {
     text-decoration: none;
-    /*padding: 3vh;*/
     color: white;
     font-size: min(10vw, 10vh);
     font-weight: 500;

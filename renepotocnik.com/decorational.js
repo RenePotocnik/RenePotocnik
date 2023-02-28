@@ -1,5 +1,5 @@
 function init() {
-    let partNum = 30;
+    let partNum = 20;
     let c = document.getElementById('c');
     let ctx = c.getContext('2d');
 
@@ -35,14 +35,14 @@ function init() {
         this.x = Math.random() * (w + w / 8) - w / 8;
         this.y = Math.random() * (h + h / 8) - h / 8;
 
-        this.r = Math.random() * (screen.width * 0.004) + 2;
+        this.r = Math.random() * (screen.width * 0.002) + 2;
     }
 
     let draw = function () {
         c.width = w;
         c.height = h;
 
-        const ratios = [2, 3.5, 5, 6.5, 8, 9.5, 11, 12.5];
+        const ratios = [3.5, 5, 6.5, 8, 9.5, 11, 12.5];
 
         for (let t = 0; t < particles.length; t++) {
             let p = particles[t];
@@ -54,8 +54,8 @@ function init() {
             while (ratioIndex < ratios.length && p.r < 9 - ratioIndex) {
                 ratioIndex++;
             }
-            nowX = p.x + mouse.x / ratios[ratioIndex];
-            nowY = p.y + mouse.y / ratios[ratioIndex];
+            nowX = p.x + mouse.x / p.r;
+            nowY = p.y + mouse.y / p.r;
 
             ctx.beginPath();
             ctx.fillStyle = color;

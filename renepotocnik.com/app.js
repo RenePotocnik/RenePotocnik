@@ -35,21 +35,31 @@ function splitLetters(className) {
             letters[i].style.opacity = `${1 - (window.scrollY / 900)}`;
             letters[i].style.filter = `blur(${window.scrollY / 500}px)`;
         }
+
+        if (!('ontouchstart' in window) || !(navigator.maxTouchPoints > 0)) {
+            cursor.style.top = lastCursorY + "px";
+        }
     });
 }
 
 
 const cursor = document.querySelector(".cursor");
+const cursorPoint = document.querySelector(".cursorPoint");
 
-addEventListener("mousemove", (event) => {
+addEventListener("mousemove", cursorUpdate);
+function cursorUpdate (event) {
     // Move `#cursor` element to the mouse position
     if (!('ontouchstart' in window) || !(navigator.maxTouchPoints > 0)) {
         cursor.style.left = event.pageX + "px";
         cursor.style.top = event.pageY + "px";
+
+        cursorPoint.style.left = event.pageX + "px";
+        cursorPoint.style.top = event.pageY + "px";
     } else {
         cursor.style.display = "none";
+        cursorPoint.style.display = "none";
     }
-});
+}
 
 let hoverables = document.querySelectorAll(".hoverable");
 hoverables.forEach((el) => {
