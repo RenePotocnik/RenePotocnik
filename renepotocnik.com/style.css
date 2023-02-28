@@ -44,7 +44,6 @@ body {
 .cursorPoint {
     display: block;
     position: absolute;
-    align-content: center;
     transform: translate(-50%, -50%);
     width: 1vh;
     height: 1vh;
@@ -56,7 +55,6 @@ body {
     transition: 0s;
 }
 .cursor {
-    align-content: center;
     display: block;
     position: absolute;
     transform: translate(-50%, -50%);

@@ -35,10 +35,6 @@ function splitLetters(className) {
             letters[i].style.opacity = `${1 - (window.scrollY / 900)}`;
             letters[i].style.filter = `blur(${window.scrollY / 500}px)`;
         }
-
-        if (!('ontouchstart' in window) || !(navigator.maxTouchPoints > 0)) {
-            cursor.style.top = lastCursorY + "px";
-        }
     });
 }
 
