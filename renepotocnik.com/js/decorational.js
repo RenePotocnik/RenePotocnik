@@ -35,7 +35,7 @@ function init() {
         this.x = Math.random() * (w + w / 8) - w / 8;
         this.y = Math.random() * (h + h / 8) - h / 8;
 
-        this.r = Math.random() * (screen.width * 0.002) + 2;
+        this.r = Math.random() * (screen.width * 0.001) + 2;
     }
 
     let draw = function () {

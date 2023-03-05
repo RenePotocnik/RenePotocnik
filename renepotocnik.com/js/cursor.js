@@ -1,6 +1,14 @@
 const cursor = document.querySelector(".cursor");
 const cursorPoint = document.querySelector(".cursorPoint");
 
+if (('ontouchstart' in window) || (navigator.maxTouchPoints > 0)) {
+    cursor.style.display = "none";
+    cursorPoint.style.display = "none";
+} else {
+    cursor.style.display = "block";
+    cursorPoint.style.display = "block";
+}
+
 addEventListener("mousemove", cursorUpdate);
 function cursorUpdate (event) {
     // Move `#cursor` element to the mouse position
