@@ -1,0 +1,36 @@
+* {
+    cursor: none;
+}
+
+.cursorPoint {
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 1vh;
+    height: 1vh;
+    z-index: 11;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transition: 0s;
+}
+.cursor {
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 4vh;
+    height: 4vh;
+    z-index: 10;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transition: 0.1s;
+}
+.cursorBig {
+    width: 15vh;
+    height: 15vh;
+    transform: translate(-50%, -50%);
+    transition: 0.1s;
+}
