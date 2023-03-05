@@ -140,10 +140,38 @@ a:hover {
     height: min(11vw, 11vh);
 }
 
-#c {
+#starsCanvas {
     display: block;
     position: absolute;
     mix-blend-mode: difference;
     margin-top: 0;
     user-select: none;
 }
+
+/* WIP code for a project board */
+
+/*.achievementsContainer {*/
+/*    overflow-x: hidden;*/
+/*    transform: rotate(-90deg) translateY(-100vh);*/
+/*    transform-origin: right top;*/
+
+/*    height: 100vw;*/
+/*    width: 100vh;*/
+
+/*    border: solid 1px red;*/
+/*}*/
+/*.achievement {*/
+/*    height: 90vh;*/
+/*    width: 90vw;*/
+/*    transform: rotate(90deg);*/
+/*    !*transform-origin: right top;*!*/
+/*    color: white;*/
+/*    border: solid 1px red;*/
+
+/*}*/
+/*.achievementsContainer h1 {*/
+/*    font-size: clamp(20px, 5vw, 100px);*/
+/*}*/
+/*.achievement .title {*/
+
+/*}*/

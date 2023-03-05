@@ -1,6 +1,6 @@
 function init() {
     let partNum = 20;
-    let c = document.getElementById('c');
+    let c = document.getElementById('starsCanvas');
     let ctx = c.getContext('2d');
 
     let w = window.innerWidth;
@@ -14,8 +14,8 @@ function init() {
 
     window.addEventListener("deviceorientation", function (e) {
         // Move points based on device gyro
-        mouse.x = e.gamma * 2;
-        mouse.y = e.beta * 2;
+        mouse.x = e.gamma;
+        mouse.y = e.beta;
     }, true);
 
     window.addEventListener('mousemove', function (e) {
