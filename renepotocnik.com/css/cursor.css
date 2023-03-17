@@ -6,8 +6,8 @@
     display: block;
     position: absolute;
     transform: translate(-50%, -50%);
-    width: 4vh;
-    height: 4vh;
+    width: 5vh;
+    height: 5vh;
     z-index: 10;
     border-radius: 100%;
     background-color: rgb(255, 255, 255);
@@ -17,8 +17,8 @@
 }
 
 .cursorPoint {
-    width: 1vh;
-    height: 1vh;
+    width: 2vh;
+    height: 2vh;
     z-index: 11;
     transition: 0s;
 }
