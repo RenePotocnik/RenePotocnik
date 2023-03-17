@@ -13,6 +13,7 @@ body {
     color: white;
     background-color: black;
     overflow-x: hidden;
+    scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {
