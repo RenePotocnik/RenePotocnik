@@ -66,17 +66,21 @@ function init() {
     intervalDraw = setInterval(draw, 30);
 }
 
-let intervalDraw;
-let throttled = false;
-const delay = 100;
-window.addEventListener('resize', function () {
-    if (!throttled) {
-        throttled = true;
-        clearInterval(intervalDraw);
-        // init();
-        window.location.reload();
-        setTimeout(function () {throttled = false;}, delay);
-    }
-});
+// For some reason IOS browsers really don't like this code :(
+
+// let intervalDraw;
+// let throttled = false;
+// const delay = 100;
+// window.addEventListener('resize', function () {
+//     if (!throttled) {
+//         throttled = true;
+//         clearInterval(intervalDraw);
+//         // init();
+//         window.location.reload();
+//         setTimeout(function () {throttled = false;}, delay);
+//     }
+// });
+
+ScreenOrientation.onchange = function () { window.location.reload(); }
 
 init();
