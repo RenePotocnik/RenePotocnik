@@ -10,7 +10,7 @@
     height: 5vh;
     z-index: 10;
     border-radius: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white_bright);
     mix-blend-mode: difference;
     pointer-events: none;
     transition: 0.1s;
