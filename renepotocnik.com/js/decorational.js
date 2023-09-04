@@ -66,6 +66,7 @@ function init() {
     intervalDraw = setInterval(draw, 30);
 }
 
+// When the page size changes, the stars are out of place; redraw them
 // For some reason IOS browsers really don't like this code :(
 
 // let intervalDraw;
