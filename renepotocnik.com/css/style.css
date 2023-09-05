@@ -109,7 +109,6 @@ a {
     row-gap: 10vh;
     column-gap: 3vw;
     /*padding-bottom: 10vh;*/
-    border: 1px red solid;
 }
 
 a:hover {
