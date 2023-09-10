@@ -1,100 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000"/>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rene Potočnik</title>
-    <meta name="title" content="Rene Potočnik">
-    <meta name="description" content="A work-in-progress personal portfolio website made by, and for Rene Potočnik.">
-    <meta name="keywords" content="Rene Potocnik, Rene Potočnik, Rene, Potocnik, Potočnik, renepotocnik, potocnikrene, rene.potocnik, Portfolio, Personal, Website, HTML, CSS, JavaScript, JS, Canvas, Canvas API, Animation">
-    <link rel="canonical" href="https://www.renepotocnik.com/">
-
+    <meta name="description" content="Full-tack developer.">
+    <meta name="author" content="index.html">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords"
+          content="UI/UX, Front End Development, Full-stack developer, programmer">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://renepotocnik.com/">
+    <meta property="og:url" content="index.html">
     <meta property="og:title" content="Rene Potočnik">
-    <meta property="og:description" content="A work-in-progress personal portfolio website made by, and for Rene Potočnik.">
-    <meta property="og:image" content="https://user-images.githubusercontent.com/76653181/221281285-5908a3c2-068d-4066-92aa-9016c7c6fd1a.png">
+    <meta property="og:description"
+          content="Full-tack developer.">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/RP_Circle_512.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="assets/fonts/PPMori-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="stylesheet" href="assets/css/bundle.css">
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-F2ZVXRFLB4"></script>
+    <script>window.dataLayer = window.dataLayer || [];
 
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://renepotocnik.com/">
-    <meta property="twitter:title" content="Rene Potočnik">
-    <meta property="twitter:description" content="A work-in-progress personal portfolio website made by, and for Rene Potočnik.">
-    <meta property="twitter:image" content="https://user-images.githubusercontent.com/76653181/221281285-5908a3c2-068d-4066-92aa-9016c7c6fd1a.png">
+    function gtag() {
+        dataLayer.push(arguments);
+    }
 
-    <link rel="icon" href="assets/Logo_100x100.png">
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/cursor.css">
+    gtag('js', new Date());
+    gtag('config', 'G-F2ZVXRFLB4');
+    </script>
 </head>
-<body>
+<body data-barba="wrapper">
+    <div id="viewport">
+        <div data-barba="container" data-barba-namespace="home">
+            <header id="header" class="header">
+                <div class="wrapper">
+                    <nav class="nav"><a href="index.html" class="nav__logo header__item"> </a>
+                        <div class="nav__links">
+                            <a href="#about" class="nav__link js--nav-link header__item text-link">About</a>
+                            <a href="#work" class="nav__link js--nav-link header__item text-link">Achievements</a>
+                        </div>
+                        <label class="nav__theme header__item">
+                            <div class="nav__theme__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 12 12" class="cc-moon">
+                                    <path fill="none" d="M0 0h12v12H0z"></path>
+                                    <path fill="currentColor"
+                                          d="M6.315 10.617q-.223 0-.448-.02a4.93 4.93 0 0 1-.876-9.66.394.394 0 0 1 .486.486 4.142 4.142 0 0 0 5.1 5.1.394.394 0 0 1 .486.486 4.943 4.943 0 0 1-4.748 3.608Zm-1.741-8.69a4.142 4.142 0 1 0 5.5 5.5 4.931 4.931 0 0 1-5.5-5.5Z"></path>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 11.997 11.999" class="cc-sun">
+                                    <path fill="currentColor"
+                                          d="M5.599 11.601v-1a.4.4 0 0 1 .4-.4.4.4 0 0 1 .4.4v1a.4.4 0 0 1-.4.4.4.4 0 0 1-.4-.4Zm4.075-1.356-.708-.707a.4.4 0 0 1 0-.565.4.4 0 0 1 .567 0l.705.707a.4.4 0 0 1 0 .565.391.391 0 0 1-.282.117.4.4 0 0 1-.28-.12Zm-7.919 0a.4.4 0 0 1 0-.565l.707-.707a.4.4 0 0 1 .565 0 .4.4 0 0 1 0 .565l-.707.707a.39.39 0 0 1-.283.117.393.393 0 0 1-.28-.12Zm.493-4.533a3.463 3.463 0 0 1 3.457-3.46 3.463 3.463 0 0 1 3.457 3.46 3.46 3.46 0 0 1-3.457 3.456A3.46 3.46 0 0 1 2.25 5.709Zm.813 0a2.648 2.648 0 0 0 2.645 2.642 2.646 2.646 0 0 0 2.645-2.642 2.647 2.647 0 0 0-2.645-2.645 2.649 2.649 0 0 0-2.644 2.642Zm7.537.689a.4.4 0 0 1-.4-.4.4.4 0 0 1 .4-.4h1a.4.4 0 0 1 .4.4.4.4 0 0 1-.4.4Zm-10.2 0a.4.4 0 0 1-.4-.4.4.4 0 0 1 .4-.4h1a.4.4 0 0 1 .4.4.4.4 0 0 1-.4.4Zm8.568-3.367a.4.4 0 0 1 0-.568l.708-.705a.4.4 0 0 1 .564 0 .4.4 0 0 1 0 .565l-.705.708a.407.407 0 0 1-.284.114.406.406 0 0 1-.281-.117Zm-6.5 0-.707-.708a.4.4 0 0 1 0-.565.4.4 0 0 1 .565 0l.707.705a.4.4 0 0 1 0 .568.406.406 0 0 1-.282.114.4.4 0 0 1-.285-.117Zm3.137-1.632v-1a.4.4 0 0 1 .4-.4.4.4 0 0 1 .4.4v1a.4.4 0 0 1-.4.4.4.4 0 0 1-.404-.401Z"></path>
+                                </svg>
+                            </div>
+                            <input id="toggleTheme" type="checkbox" name="theme" class="nav__theme__toggle">
+                            <div id="toggleThemeText" class="nav__theme__text">Light</div>
+                        </label></nav>
+                </div>
+            </header>
+            <main>
+                <section class="h-hero">
+                    <div class="wrapper">
+                        <div class="h-hero__top">
+                            <div class="h-hero__title"><h1><span class="text-hidden">Rene Potočnik </span><span>Rene Potočnik</span>
+                            </h1></div>
+                        </div>
+                        <div class="h-hero__bottom">
+                            <div id="about" class="h-hero__text"><p>I'm currently enrolled at the Secondary Electrical and
+                                Computer School in Maribor, Slovenia. As a full-stack developer, I am proficient in Python,
+                                C/C++, Go, Dart, JavaScript, Vue.js, HTML, CSS, and more. I have a passion for exploring new
+                                technologies, tackling new challenges, and continuously seeking ways to enhance my
+                                expertise.</p>
+                            </div>
+                            <ul class="h-hero__social">
+                                <li><span>Find me on:</span></li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/renepotocnik/" target="_blank"
+                                       class="text-link"><span>LinkedIn</span></a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/RenePotocnik" target="_blank"
+                                       class="text-link"><span>GitHub</span></a>
+                                </li>
+                                <li>
+                                    <a href="mailto:info@renepotocnik.com" target="_blank"
+                                       class="text-link"><span>Email</span></a>
+                                </li>
+                                <li>
+                                    <a href="https://discord.com/users/236809680947511297" target="_blank"
+                                       class="text-link"><span>Discord</span></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/renepotocnik/" target="_blank"
+                                       class="text-link"><span>Instagram</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="work" class="projects">
+                    <div class="wrapper">
+                        <div class="projects__header">
+                            <div><h3>Achievements</h3><span>(4)</span></div>
+                            <p>My most notable achievements so far</p>
+                        </div>
+                        <div class="projects__list">
 
-<section class="mainNameSection">
-    <div class="nameLetterContainer1">
-        Rene
-    </div>
-    <div class="nameLetterContainer2">
-        Potočnik
-    </div>
-    <canvas id="starsCanvas"></canvas>
-</section>
+                            <a href="https://www.robocup.fr/robocupjunior-1"
+                               data-img="./assets/images/international_2023.jpg"
+                               class="project">
+                                <div class="project__text"><h2 class="project__title">RoboCup Bordeaux, France</h2>
+                                    <p data-splitting class="project__info">3st place at the RoboCup Junior 2023
+                                        International Championship</p>
+                                </div>
+                                <div class="project__year">/23</div>
+                            </a>
 
-<section class="linksContainer">
-    <a class="hidden hoverable" href="https://www.linkedin.com/in/renepotocnik/" target="_blank">
-        <img class="hidden logoImage"
-             src="assets/LinkedIn.png"
-             alt="LinkedIn Logo">
-        LinkedIn
-    </a>
-    <a class="hidden hoverable" href="https://github.com/RenePotocnik" target="_blank">
-        <img class="hidden logoImage"
-             src="assets/GitHub.png"
-             alt="GitHub Logo">
-        GitHub
-    </a>
-    <a class="hidden hoverable" href="https://discord.com/users/236809680947511297" target="_blank">
-        <img class="hidden logoImage"
-             src="assets/Discord.png"
-             alt="Discord Logo">
-        Discord
-    </a>
-    <a class="hidden hoverable" href="mailto:info@renepotocnik.com" target="_blank">
-        <img class="hidden logoImage"
-             src="assets/Email.png"
-             alt="Email Logo">
-        Email
-    </a>
-</section>
+                            <a href="https://rcjcroatia2023.eu/" data-img="./assets/images/european_2023.jpg"
+                               class="project">
+                                <div class="project__text"><h2 class="project__title">RoboCup Varaždin, Croatia</h2>
+                                    <p data-splitting class="project__info">
+                                        1st place at the RoboCup Junior 2023 European Championship</p>
+                                </div>
+                                <div class="project__year">/23</div>
+                            </a>
 
-<section class="workInProgress">
-    <div class="small_text hidden">
-        Website still in development
-    </div>
-</section>
+                            <a href="https://github.com/RenePotocnik/sers-projektni-teden"
+                               data-img="./assets/images/projectWeek.jpg"
+                               class="project">
+                                <div class="project__text"><h2 class="project__title">Project Week</h2>
+                                    <p data-splitting class="project__info">Best project of Project Week</p>
+                                </div>
+                                <div class="project__year">/23</div>
+                            </a>
 
-<!--<section class="achievementsContainer">-->
-<!--    <div class="achievement title">-->
-<!--        <h1 class="title">Achievements</h1>-->
+                            <a href="https://2022.robocupjunior.eu/" data-img="./assets/images/european_2022.webp"
+                               class="project">
+                                <div class="project__text"><h2 class="project__title">RoboCup Guimarães, Portugal</h2>
+                                    <p data-splitting class="project__info">
+                                        1st place at the RoboCup Junior 2022 European Championship</p>
+                                </div>
+                                <div class="project__year">/22</div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+<!--        </div>-->
 <!--    </div>-->
-
-<!--    <div class="achievement">-->
-<!--        <h1>1st place at the RoboCup Junior 2022 European Championship</h1>-->
-<!--        1st place in the Rescue Simulation "SuperTeam" category at the RoboCup Junior 2022 European championship in Guimarães, Portugal.-->
-<!--    </div>-->
-<!--</section>-->
-
-
-<div class="cursor"></div>
-<div class="cursor cursorPoint"></div>
-
-
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
-<!--<script src="https://www.unpkg.com/spltjs@1.1.0"></script>-->
-<script src="js/decorational.js"></script>
-<script src="js/cursor.js"></script>
-<script src="js/main.js"></script>
-
-
+    <script src="assets/js/bundle.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
