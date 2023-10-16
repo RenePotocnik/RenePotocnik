@@ -8,6 +8,20 @@
     color: #eeeeee;
 }
 
+/* Animation when the socials button is clicked */
+@keyframes socialsAnimation {
+    0%, 100% { transform: translateX(0); }
+    50% {
+        transform: translateX(-20px);
+        -webkit-filter: invert(100%);
+    }
+}
+
+.socialsAnimation {
+    animation: socialsAnimation 0.6s ease-in-out;
+}
+
+
 button, hr, input {
     overflow: visible
 }

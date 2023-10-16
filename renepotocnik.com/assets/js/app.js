@@ -7,6 +7,21 @@
         return t[r].call(o.exports, o, o.exports, n), o.l = !0, o.exports
     }
 
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const socials = Array.from(document.querySelectorAll('#socials li')).slice(1);
+        const socialsHeaderLink = document.querySelector('.socialsHeaderLink');
+        let delay = 0.8;
+
+        socialsHeaderLink.addEventListener('click', (event) => {
+            socials.forEach((social) => {
+                social.style.animationDelay = `${delay}s`;
+                social.classList.add('socialsAnimation');
+                delay += 0.2; // Increase delay for each li
+            });
+        });
+    });
+
+
     n.m = t, n.c = e, n.d = function (t, e, r) {
         n.o(t, e) || Object.defineProperty(t, e, {enumerable: !0, get: r})
     }, n.r = function (t) {
