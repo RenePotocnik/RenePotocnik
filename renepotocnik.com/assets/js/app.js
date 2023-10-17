@@ -21,6 +21,10 @@
         });
     });
 
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+        console.log('callback - config loaded');
+    });
+
 
     n.m = t, n.c = e, n.d = function (t, e, r) {
         n.o(t, e) || Object.defineProperty(t, e, {enumerable: !0, get: r})

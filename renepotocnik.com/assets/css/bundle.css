@@ -8,6 +8,14 @@
     color: #eeeeee;
 }
 
+#particles-js canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
 /* Animation when the socials button is clicked */
 @keyframes socialsAnimation {
     0%, 100% { transform: translateX(0); }
