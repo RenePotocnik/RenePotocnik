@@ -306,7 +306,7 @@ body.dark-mode #awwwards svg g path {
 
 @font-face {
     font-family: "PP Mori";
-    src: url(PPMori-Regular.woff) format("woff"), url(PPMori-Regular.woff2) format("woff2");
+    src: url(../fonts/PPMori-Regular.woff) format("woff"), url(../fonts/PPMori-Regular.woff2) format("woff2");
     font-weight: 400;
     font-display: swap
 }
