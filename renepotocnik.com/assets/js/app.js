@@ -3386,7 +3386,7 @@
                 y: this.animatableProps.ty.previous,
                 rotation: this.animatableProps.rotation.previous,
                 skewX: this.animatableProps.skewx.previous,
-                filter: `brightness(${this.animatableProps.brightness.previous}) saturate(${this.animatableProps.saturation.previous})`
+                // filter: `brightness(${this.animatableProps.brightness.previous}) saturate(${this.animatableProps.saturation.previous})`
             }), this.firstRAFCycle = !1, this.renderLoop()
         }
 
