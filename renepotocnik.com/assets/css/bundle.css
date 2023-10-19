@@ -88,7 +88,8 @@ body, html, sub, sup {
 .legal h1, .p-hero__year, .p-info h2, .process__title h2, .project .project__year, .services__header h2, .services__item span {
     font-size: 3.58em;
     line-height: 1.1;
-    letter-spacing: -.02em
+    letter-spacing: -.02em;
+    opacity: 0.7;
 }
 
 .p-web h2, .projects__footer h3, .projects__header h3 {
