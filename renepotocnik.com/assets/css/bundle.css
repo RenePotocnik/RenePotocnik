@@ -4,8 +4,11 @@
 }
 
 ::selection {
-    background: #111111;
-    color: #eeeeee;
+    color: #666;
+
+}
+::-moz-selection {
+    color: #666;
 }
 
 #particles-js canvas {
@@ -68,7 +71,8 @@ body, html, sub, sup {
 }
 
 .h-hero__title h1 {
-    font-size: 15em
+    font-size: 15em;
+    font-family: 'Courier Prime', monospace;
 }
 
 .p-hero h1 {
@@ -91,6 +95,10 @@ body, html, sub, sup {
     font-size: 2.39em;
     line-height: 1;
     letter-spacing: -.01em
+}
+
+.p-web h2, .projects__footer h3, .projects__header p {
+    opacity: 0.7;
 }
 
 .dropdown__header p, .dropdown__header span, .legal h3, .process__list .dropdown__header h3, .process__list .dropdown__header span, .services__item h2 {
