@@ -1124,6 +1124,10 @@ header .nav__next {
     display: flex
 }
 
+.projects__header div span {
+    opacity: 0.7;
+}
+
 .projects__header span {
     margin-left: 4px
 }
