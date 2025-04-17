@@ -71,8 +71,9 @@ body, html, sub, sup {
 }
 
 .h-hero__title h1 {
-    font-size: 13em;
-    font-family: 'Courier Prime', monospace;
+    font-size: 10em;
+    font-family: "Lexend", sans-serif;
+    font-weight: 300;
 }
 
 .p-hero h1 {
@@ -1222,8 +1223,8 @@ header .nav__next {
 
 .project__card {
     top: 0;
-    width: 41.87em;
-    height: 27.87em
+    width: 25em;
+    height: 18em
 }
 
 .project__card__image, .project__card__inner {

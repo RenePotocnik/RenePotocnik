@@ -21,7 +21,7 @@
         });
     });
 
-    particlesJS.load('particles-js', 'assets/particles.json', function() {
+    particlesJS.load('particles-js', 'assets/particles.json', function () {
         console.log('callback - config loaded');
     });
 
@@ -3424,7 +3424,7 @@
 
     function mt() {
         function t() {
-            return null != document.cookie.match(/theme=dark/i)
+            return null != document.cookie.match(/theme=dark/i) || !document.cookie.match(/theme=/i);
         }
 
         function e() {
